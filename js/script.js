@@ -1,19 +1,21 @@
-// "use strict";
+"use strict";
 
-a = 15;
-console.log(a)
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?!","");
 
-let number = 5;
-const leftBorderWidth = 1;
-
-
-number = 10;
-console.log(number);
-
-const obj = {
-    a: 50
+const peronalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
 
-obj.a = 10;
+for(let i = 0; i < 2; i++){
+    const nameMovie = prompt("Один из последних просмотренных фильмов?!","");
+    const degree = prompt("На сколько оцените его?!","");
+    peronalMovieDB.movies[nameMovie] = degree;
+}
 
+
+console.log(peronalMovieDB)
 
